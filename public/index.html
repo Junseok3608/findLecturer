@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강사 시간표 관리 시스템</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="signup-page" style="display: none">
+      <h1>회원가입</h1>
+      <form id="signup-form">
+        <label for="employee-id">사번:</label>
+        <input type="text" id="employee-id" name="employee-id" required />
+        <label for="username">아이디:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password" required />
+        <label for="confirm-password">비밀번호 확인:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required />
+        <button type="submit">회원가입</button>
+      </form>
+      <button id="to-login">로그인 페이지로 이동</button>
+    </div>
+
+    <div id="login-page">
+      <h1>로그인</h1>
+      <form id="login-form">
+        <label for="login-username">아이디:</label>
+        <input type="text" id="login-username" name="login-username" required />
+        <label for="login-password">비밀번호:</label>
+        <input type="password" id="login-password" name="login-password" required />
+        <button type="submit">로그인</button>
+      </form>
+      <button id="to-signup">회원가입 페이지로 이동</button>
+    </div>
+
+    <div id="timetable-page" style="display: none">
+      <h1>강의 시간표</h1>
+      <div id="calendar">
+        <!-- 달력 및 시간표 표시 -->
+      </div>
+      <div id="available-times">
+        <h2>대체 강의 가능 시간 등록</h2>
+        <form id="available-times-form">
+          <label for="available-date">날짜:</label>
+          <input type="date" id="available-date" name="available-date" required />
+          <label for="available-time">시간:</label>
+          <select id="available-time" name="available-time" required>
+            <option value="1">1교시 (09:00 - 10:00)</option>
+            <option value="2">2교시 (10:00 - 11:00)</option>
+            <option value="3">3교시 (11:00 - 12:00)</option>
+            <option value="4">4교시 (12:00 - 13:00)</option>
+            <option value="5">5교시 (13:00 - 14:00)</option>
+            <option value="6">6교시 (14:00 - 15:00)</option>
+            <option value="7">7교시 (15:00 - 16:00)</option>
+            <option value="8">8교시 (16:00 - 17:00)</option>
+          </select>
+          <button type="submit">등록</button>
+        </form>
+      </div>
+      <div id="substitute-search">
+        <h2>대체 강사 검색</h2>
+        <!-- 대체 강사 검색 결과 표시 -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
